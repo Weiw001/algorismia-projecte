@@ -1,6 +1,6 @@
 #include "RWTrie.hh"
 
-node* delete_key(node* n, string key) {
+node* RWTrie::delete_key(node* n, string key) {
     if(n == nullptr) return nullptr;
     else if(key.empty()) n->info = NULL;
     //recursively delete from children
