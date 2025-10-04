@@ -1,6 +1,10 @@
 #include "RWTrie.hh"
 
-int RWTrie::recursiveFind(node* raiz, int index, const string &x) {
+
+
+
+
+template <typename T>int RWTrie<T>:: recursiveFind(node* raiz, int index, const string &x) {
 
     if(index != x.length() - 1) {
         // before verifying the  last character 
@@ -15,8 +19,8 @@ int RWTrie::recursiveFind(node* raiz, int index, const string &x) {
     }
 }
 
-T RWTrie::getValue(const string &x) {
-    if (phijos[x[0] - '0'] == NULL) return T();
+template <typename T> T RWTrie<T>::getValue(const string &x) {
+    if (raiz->phijos[x[0] - '0'] == NULL) return T();
     int result;
     int index = 0;
     for (node* nextNode:raiz->phijos) {
@@ -28,6 +32,7 @@ T RWTrie::getValue(const string &x) {
     return result;
 }
 
-bool RWTrie::contains(string key) {
-    return getValue(key) != NULL;
+
+template <typename T> bool RWTrie<T>:: contains(string key) {
+    return (getValue(key) != T());
 }
