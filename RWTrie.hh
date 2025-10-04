@@ -38,8 +38,6 @@ public:
 
     node* delete_key(node* n, string key);
 
-    node* delete_key(node* n, string key);
-
 };
 
 #endif
