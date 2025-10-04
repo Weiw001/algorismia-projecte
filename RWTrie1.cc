@@ -15,8 +15,8 @@ int recursiveFind(node* raiz, int index, const string &x) {
 
 static int findInRwtrie(const string &x) {
     if(phijos[x[0] - '0'] == NULL)return T();
-    int result;
-    int index = 0;
+    T result;
+    int index = 1;
     for(node* nextNode:raiz->phijos) {
         if(nextNode->info == x[index]) {
             result = recursiveFind(nextNode,index+1,x);
@@ -31,6 +31,7 @@ T get(const string &x) {
     return findInRwtrie(x); 
 }
 
-bool contains(string key) {
-    return getValue(key) != NULL;
+ bool contain(const string &x) {
+
+    return (findInRwtrie(x) != T());
 }
