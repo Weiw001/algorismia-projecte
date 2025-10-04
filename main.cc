@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void main() {
+int main() {
     RWTrie<char> trie;
 
     // test
