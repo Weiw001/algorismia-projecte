@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Trie.hh"
+#include "RWTrie.hh"
 
 using namespace std;
 
