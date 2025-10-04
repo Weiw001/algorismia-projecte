@@ -1,9 +1,8 @@
 #include <iostream>
-#include "Trie.hh"
+#include "RWTrie.hh"
 
-using namespace std;
+int main() {
+    RWTrie<char> trie;
 
-void main() {
-    RWTrie trie;
-
+    // test
 }
