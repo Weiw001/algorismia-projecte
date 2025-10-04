@@ -1,4 +1,4 @@
 # algorismia-projecte
 version: 0.1  
-problema:  
+problema:
 - T not nullable
