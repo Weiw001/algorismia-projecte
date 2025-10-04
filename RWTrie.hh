@@ -132,7 +132,7 @@ public:
         return (primer_node==NULL);
     }*/
 
-    node* delete_node(node* n, string key) {
+    node* delete_key(node* n, string key) {
         if(n == nullptr) return nullptr;
         else if(key.empty()) n->info = T();
         //recursively delete from children
