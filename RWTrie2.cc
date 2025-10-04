@@ -1,6 +1,10 @@
 #include "RWTrie.hh"
 
+<<<<<<< HEAD
 template <typename T> typename RWTrie<T>:: node* RWTrie<T>::delete_key(node* n, string key) {
+=======
+template<class T> RWTrie<T>::node *RWTrie<T>::delete_key(RWTrie<T>::node* n, string key) {
+>>>>>>> eb8bde7514cbaa861621c9ea1f125e5559d6d245
     if(n == nullptr) return nullptr;
     else if(key.empty()) n->info = NULL;
     //recursively delete from children

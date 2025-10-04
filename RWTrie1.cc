@@ -1,10 +1,14 @@
 #include "RWTrie.hh"
 
+<<<<<<< HEAD
 
 
 
 
 template <typename T>int RWTrie<T>:: recursiveFind(node* raiz, int index, const string &x) {
+=======
+int recursiveFind(node* raiz, int index, const string &x) {
+>>>>>>> eb8bde7514cbaa861621c9ea1f125e5559d6d245
 
     if(index != x.length() - 1) {
         // before verifying the  last character 
