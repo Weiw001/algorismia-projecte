@@ -1,6 +1,5 @@
 #include "RWTrie.hh"
 
-
 template <typename T> typename RWTrie<T>:: node* RWTrie<T>::delete_key(node* n, string key) {
     if(n == nullptr) return nullptr;
     else if(key.empty()) n->info = NULL;
