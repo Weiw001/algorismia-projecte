@@ -1,32 +1,15 @@
 #include "RWTrie.hh"
 
-template <typename T>int RWTrie<T>:: recursiveFind(node* raiz, int index, const string &x) {
-    if(index != x.length() - 1) {
-        // before verifying the  last character 
-        node* next = raiz[x[index]-'0'];
-        if(next != NULL)return recursiveFind(next,index+1,x);
-        else return T();
-    }
-    else {
-        // case we are verifying the last character
-        if(raiz != NULL) return raiz->value;
-        else return T();
-    }
+template<typename T> T RWTrie<T>::recursiveFind(node* actNode, const string &key, int i) {
+    if(actNode == nullptr) return NULL;
+    if(i == key.length()) return actNode->valor;
+    return recursiveFind(actNode->pHijos[key[i]], key, i+1);
 }
 
-template <typename T> T RWTrie<T>::getValue(const string &x) {
-    if (raiz->phijos[x[0] - '0'] == NULL) return T();
-    int result;
-    int index = 0;
-    for (node* nextNode : raiz->phijos) {
-        if (nextNode->info == x[index]) {
-            result = recursiveFind(nextNode,index+1,x);
-            
-        } 
-    }
-    return result;
+template<typename T> T RWTrie<T>::getValue(const string &key) {
+    return recursiveFind(raiz, 0, key);
 }
 
-template <typename T> bool RWTrie<T>:: contains(string key) {
-    return (getValue(key) != T());
+template<typename T> bool RWTrie<T>::contain(const string &key) {
+    return (getValue(key) != NULL);
 }

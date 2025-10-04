@@ -10,37 +10,37 @@ template <typename T> class RWTrie {
 
 private:     
 
-    const int R = 256; // extended ascii
+    static const int R = 256; // extended ascii
 
     struct node {
         T valor;
-        vector<node*> phijos; // vector de R punteros de los hijos
+        vector<node*> pHijos; // vector de R punteros de los hijos
+        int nHijos;
     };
 
     node* raiz;
 
-    static int recursiveFind(node* raiz, int index, const string &x);
+    static T recursiveFind(node* actNode, const string &key, int i);
 
-    static node* put(node* current, const string &key, const T &val, int i);
+    static node* insertNode(node* current, const string &key, const T &val, int i);
+
+    static node* deleteNode(node* n, const string &key, int i);
 
 public:
 
     RWTrie() {
         raiz = new node();
-        raiz->phijos.resize(R);
-    }
-
-    RWTrie(const string &key, const T &val) {
-        insert(key, val);
+        raiz->pHijos.resize(R);
+        raiz->nHijos = 0;
     }
 
     void insert(const string &key, const T &val);
 
-    T getValue(const string &x);
+    T getValue(const string &key);
 
-    bool contains(string key);
+    bool contain(const string &key);
 
-    node* delete_key(node* n, string key);
+    void remove(const string &key);
 
 };
 
