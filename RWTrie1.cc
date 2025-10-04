@@ -32,7 +32,7 @@ T get(const string &x) {
     return findInRwtrie(x); 
 }
 
- bool contain(const string &x) {
+bool contain(const string &x) {
 
     return (findInRwtrie(x) != T());
 }

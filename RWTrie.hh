@@ -13,10 +13,10 @@ private:
 
     struct node {
         T valor;
-        vector<node*> phijos(R); // vector de R punteros de los hijos
+        vector<node*> phijos; // vector de R punteros de los hijos
     };
 
-    node* raiz;
+    node raiz;
 
     int recursiveFind(node* raiz, int index, const string &x);
 
@@ -25,7 +25,7 @@ private:
 public:
 
     RWTrie() {
-        raiz = NULL;
+        raiz.phijos.resize(R);
     }
 
     RWTrie(string key) {
