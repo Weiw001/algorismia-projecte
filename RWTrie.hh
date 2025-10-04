@@ -46,7 +46,7 @@ private:
 
 public:
 
-    RWTrie{
+    RWTrie() {
         raiz = NULL;
     }
 
