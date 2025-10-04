@@ -46,6 +46,10 @@ private:
 
 public:
 
+    RWTrie() {
+        raiz = NULL;
+    }
+
     /*Arbre() {
         primer_node= NULL;
     }

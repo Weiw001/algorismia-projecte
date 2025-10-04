@@ -6,4 +6,5 @@ using namespace std;
 void main() {
     RWTrie trie;
 
+    // test
 }
