@@ -18,32 +18,10 @@ private:
 
     node* raiz;
 
-    int recursiveFind(node* raiz, int index, const string &x) {
-
-        if(index != x.length()) {
-            node* next = raiz[x[index]-'0'];
-            if(next != NULL)return recursiveFind(next,index+1,x);
-            else return T();
-        }
-        else {
-            if(raiz != NULL) return raiz->value;
-            else return T();
-        }
-    }
+    int recursiveFind(node* raiz, int index, const string &x);
 
 
-    static int findInRwtrie(const string &x) {
-        if(phijos[x[0] - '0'] == NULL)return T();
-        int result;
-        int index = 0;
-        for(node* nextNode:raiz->phijos) {
-            if(nextNode->info == x[index]) {
-                result = recursiveFind(nextNode,index+1,x);
-                
-            } 
-        }
-        return result;
-    }
+    static int findInRwtrie(const string &x);
 
     //static node* copia_node(node* m) { 
         /* Pre: cert */
