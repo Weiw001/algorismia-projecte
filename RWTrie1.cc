@@ -1,6 +1,6 @@
 #include "RWTrie.hh"
 
-int RWTrie::recursiveFind(node* raiz, int index, const string &x) {
+int recursiveFind(node* raiz, int index, const string &x) {
 
     if(index != x.length() - 1) {
         // before verifying the  last character 
