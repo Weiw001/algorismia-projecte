@@ -21,6 +21,8 @@ private:
 
     static int recursiveFind(node* raiz, int index, const string &x);
 
+    static node* put(node* current, const string &key, const T &val, int i);
+
 public:
 
     RWTrie() {
@@ -28,9 +30,11 @@ public:
         raiz->phijos.resize(R);
     }
 
-    RWTrie(string key) {
-        //insert()
+    RWTrie(const string &key, const T &val) {
+        insert(key, val);
     }
+
+    void insert(const string &key, const T &val);
 
     T getValue(const string &x);
 
