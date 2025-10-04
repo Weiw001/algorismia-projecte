@@ -17,14 +17,15 @@ private:
         vector<node*> phijos; // vector de R punteros de los hijos
     };
 
-    node raiz;
+    node* raiz;
 
-    int recursiveFind(node* raiz, int index, const string &x);
+    static int recursiveFind(node* raiz, int index, const string &x);
 
 public:
 
     RWTrie() {
-        raiz.phijos.resize(R);
+        raiz = new node();
+        raiz->phijos.resize(R);
     }
 
     RWTrie(string key) {
