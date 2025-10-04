@@ -82,22 +82,14 @@ public:
     }
 
     RWTrie(string key) {
-        insert()
+        //insert()
     }
 
-    T get(const string &x) {
-        
-        return findInRwtrie(x); 
-    }
+    T get(const string &x);
 
-    bool contain(const string &x) {
+    bool contains(string key);
 
-        return (findInRwtrie(x) != T());
-    }
-
-    bool contains(string key) {
-        return getValue(key) != NULL;
-    }
+    node* delete_key(node* n, string key);
 
     //T getValue(string key);
 
