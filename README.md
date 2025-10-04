@@ -1,2 +1,1 @@
 # algorismia-projecte
-testingw
