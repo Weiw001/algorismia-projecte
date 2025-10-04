@@ -13,22 +13,17 @@ int recursiveFind(node* raiz, int index, const string &x) {
     }
 }
 
-static int findInRwtrie(const string &x) {
-    if(phijos[x[0] - '0'] == NULL)return T();
+T getValue(const string &x) {
+    if (phijos[x[0] - '0'] == NULL) return T();
     int result;
     int index = 0;
-    for(node* nextNode:raiz->phijos) {
-        if(nextNode->info == x[index]) {
+    for (node* nextNode:raiz->phijos) {
+        if (nextNode->info == x[index]) {
             result = recursiveFind(nextNode,index+1,x);
             
         } 
     }
     return result;
-}
-
-T get(const string &x) {
-    
-    return findInRwtrie(x); 
 }
 
 bool contains(string key) {

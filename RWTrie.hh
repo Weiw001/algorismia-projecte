@@ -20,8 +20,6 @@ private:
 
     int recursiveFind(node* raiz, int index, const string &x);
 
-    static int findInRwtrie(const string &x);
-
 public:
 
     RWTrie() {
