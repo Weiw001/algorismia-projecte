@@ -4,6 +4,6 @@
 using namespace std;
 
 void main() {
-    Trie trie;
+    RWTrie trie;
 
 }
