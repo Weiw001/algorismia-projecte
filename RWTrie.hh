@@ -3,7 +3,7 @@
 
 #include <vector>
 
-template <class T> class RWTrie { 
+template <typename T> class RWTrie { 
 
 private:     
 

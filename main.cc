@@ -4,7 +4,7 @@
 using namespace std;
 
 void main() {
-    RWTrie trie;
+    RWTrie<char> trie;
 
     // test
 }
